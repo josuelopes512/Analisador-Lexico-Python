@@ -192,13 +192,12 @@ def lertudo(arq):
     print(" ")
     print(" ")
 
-def main():
-    arq = arquivo('input.txt')
-    tam = len(arq)
-
+def ler(arq):
     for i in arq:
         lertudo(i)
 
-
-
+def main():
+    arq = arquivo('input.txt')
+    ler(arq)
+    
 main()
