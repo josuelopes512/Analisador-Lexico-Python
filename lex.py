@@ -182,39 +182,8 @@ def rodar(lista):  # executa todos os passos na chamada
     else:
         return []
 
-def exemplo0(arq):
-    g = str(arq[0])
-    tabela = rodar(g)
-    d = list(tabela)
-    print("Lexema,  Tipo,  Valor")
-    for i in d:
-        print(i)
-    print(" ")
-    print(" ")
-
-
-def exemplo1(arq):
-    g = str(arq[1])
-    tabela = rodar(g)
-    d = list(tabela)
-    print("Lexema,  Tipo,  Valor")
-    for i in d:
-        print(i)
-    print(" ")
-    print(" ")
-
-def exemplo2(arq):
-    g = str(arq[2])
-    tabela = rodar(g)
-    d = list(tabela)
-    print("Lexema,  Tipo,  Valor")
-    for i in d:
-        print(i)
-    print(" ")
-    print(" ")
-
-def exemplo3(arq):
-    g = str(arq[3])
+def lertudo(arq):
+    g = str(arq)
     tabela = rodar(g)
     d = list(tabela)
     print("Lexema,  Tipo,  Valor")
@@ -225,13 +194,11 @@ def exemplo3(arq):
 
 def main():
     arq = arquivo('input.txt')
-    #linhas Comentadas
-    # exemplo0(arq)
-    # exemplo1(arq)
+    tam = len(arq)
 
-    #linhas com instruções
-    exemplo2(arq)
-    exemplo3(arq)
+    for i in arq:
+        lertudo(i)
+
 
 
 main()
