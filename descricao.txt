@@ -1,0 +1,12 @@
+Numeros
+    (0..9)+
+Pontuação
+    ( )
+Operadores_aritméticos
+    + - * / **
+Comentario
+    @
+Finalização
+    ;
+Delimitadores
+    /n /t /r " "
