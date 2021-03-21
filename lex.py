@@ -38,12 +38,6 @@ def verExp(lista): # verifica se tem alguma letra alfabetica
         teste =re.split(r' ', demo)
     return lista
 
-# def verExpr(lista): # ler tudo duma só vez, mas iria da erro
-#     seq = []
-#     for l in range(0, len(lista)):
-#         seq.insert(l,verExp(lista[l]))
-#     return seq
-
 def transformar(lista):
     listaNova=[]
     for a in lista:
@@ -63,7 +57,7 @@ def filtrarTokensNum(listx): # filtra os numeros
     x1 = []
     xv = [' '.join(lista)]
     fc = list(xv[0])
-    # print("FILTNUM: "+str(fc))
+
     for i in fc:
         if(re.search(r'[(^\()]', i)):
             fc.remove(i)
@@ -142,9 +136,7 @@ def gerarTabelaAddTk(nm, pardir, paresq, op, lst):  # gera assocciacoes para cri
 def gerarTabelaTipoTk(nm, pardir, paresq, op, list):  # gera a tabela
     result = []
     z = []
-    # list(result)
     lista = list
-    # print(lista)
     tipo=[]
     token = gerarTabelaAddTk(nm, pardir, paresq, op, list)
     #Adicionando para tabela tipo
@@ -199,5 +191,5 @@ def ler(arq):
 def main():
     arq = arquivo('input.txt')
     ler(arq)
-    
+
 main()
