@@ -164,21 +164,23 @@ def gerarTabelaTipoTk(nm, pardir, paresq, op, list):  # gera a tabela
 
 def rodar(lista):  # executa todos os passos na chamada
     strtexto = lista
-    tmp0 = remComments(strtexto) # retira comnetario
-    tmp1 = verExp(tmp0) # verifica a expressao
-    vectortexto = tratarArq(tmp1) # trata o vetor
-    Tlista = transformar(vectortexto) # transforma em vetor em indice por indice
+    tmp0 = remComments(strtexto) # retira
+    print(str(tmp0)) 
+    if(tmp0 != ''):    
+        tmp1 = verExp(tmp0) # verifica a expressao
+        vectortexto = tratarArq(tmp1) # trata o vetor
+        Tlista = transformar(vectortexto) # transforma em vetor em indice por indice
 
-    if(tmp1):
-        TKnum = filtrarTokensNum(vectortexto)
-        TKparesq = filtrarParEsq(vectortexto)
-        TKpardir = filtrarParDir(vectortexto)
-        TKop = filtrarOperadores(vectortexto)
-        tabela = gerarTabelaTipoTk(TKnum, TKpardir, TKparesq, TKop, Tlista)
-    
-        return tabela
+        if(tmp1):
+            TKnum = filtrarTokensNum(vectortexto)
+            TKparesq = filtrarParEsq(vectortexto)
+            TKpardir = filtrarParDir(vectortexto)
+            TKop = filtrarOperadores(vectortexto)
+            tabela = gerarTabelaTipoTk(TKnum, TKpardir, TKparesq, TKop, Tlista)
+        
+            return tabela
     else:
-        raise Exception("ERRO !!!")
+        return []
 
 def exemplo0(arq):
     g = str(arq[0])
